@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/ec-admin.iml" filepath="$PROJECT_DIR$/ec-admin.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ec-admin-dao/ec-admin-dao.iml" filepath="$PROJECT_DIR$/ec-admin-dao/ec-admin-dao.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ec-admin-domain/ec-admin-domain.iml" filepath="$PROJECT_DIR$/ec-admin-domain/ec-admin-domain.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ec-admin-manage/ec-admin-manage.iml" filepath="$PROJECT_DIR$/ec-admin-manage/ec-admin-manage.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ec-admin-services/ec-admin-services.iml" filepath="$PROJECT_DIR$/ec-admin-services/ec-admin-services.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ec-admin-web/ec-admin-web.iml" filepath="$PROJECT_DIR$/ec-admin-web/ec-admin-web.iml" />
+    </modules>
+  </component>
+</project>
+

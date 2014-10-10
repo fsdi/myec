@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:aop="http://www.springframework.org/schema/aop"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.5.xsd
+            http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-2.5.xsd
+            http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-2.5.xsd"
+       default-lazy-init="true">
+
+    <bean id="sessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
+        <property name="configLocation">
+            <value>classpath:mybatis-config.xml</value>
+        </property>
+        <property name="mapperLocations" value="classpath*:/sqlmaps/**/*.xml" />
+        <property name="dataSource" ref="dataSource" />
+    </bean>
+
+    <!-- 基础的DAO，所有的业务逻辑实现类必须注入此dao才能进行数据库操作 -->
+    <bean id="baseDao" class="com.womai.shop.dao.BaseDao">
+        <property name="sqlSessionFactory" ref="sessionFactory"></property>
+    </bean>
+
+
+</beans>

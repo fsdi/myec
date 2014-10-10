@@ -1,0 +1,204 @@
+<web-app version="2.4" xmlns="http://java.sun.com/xml/ns/j2ee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd">
+
+	<display-name>shop</display-name>
+	
+	<context-param> 
+		<param-name>webAppRootKey</param-name> 
+		<param-value>jeeshop.root</param-value> 
+	</context-param>
+
+    <context-param>
+        <param-name>contextConfigLocation</param-name>
+        <param-value>
+            classpath:/applicationContext-resources.xml
+            classpath:/applicationContext-tx.xml
+            classpath:/applicationContext-dao.xml
+            classpath:/applicationContext-dao-front.xml
+            classpath:/applicationContext-dao-admin.xml
+            classpath:/applicationContext-manage-front.xml
+            classpath:/applicationContext-manage-admin.xml
+            classpath:/applicationContext-services.xml
+            classpath:/applicationContext-struts.xml
+        </param-value>
+    </context-param>
+
+    <listener>
+        <listener-class>org.springframework.web.util.Log4jConfigListener</listener-class>
+    </listener>
+    <context-param>
+        <param-name>log4jConfigLocation</param-name>
+        <param-value>classpath:log4j.xml</param-value>
+    </context-param>
+
+	
+	<!--<listener>-->
+		<!--<listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>-->
+	<!--</listener>-->
+
+	
+	<servlet>    
+     <servlet-name>Uploadify</servlet-name>    
+     <servlet-class>com.womai.shop.web.servlet.Uploadify</servlet-class>
+    </servlet>    
+    <servlet-mapping>    
+     <servlet-name>Uploadify</servlet-name>    
+     <url-pattern>/uploadify.do</url-pattern>    
+    </servlet-mapping>
+
+
+	<servlet>
+		<servlet-name>ValidateImage</servlet-name>
+		<servlet-class>com.womai.shop.web.servlet.ValidateImage</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>ValidateImage</servlet-name>
+		<url-pattern>/ValidateImage.do</url-pattern>
+	</servlet-mapping>
+	
+
+    <filter>
+        <filter-name>UrlRewriteFilter</filter-name>
+        <filter-class>
+            org.tuckey.web.filters.urlrewrite.UrlRewriteFilter
+        </filter-class>
+        <init-param>
+            <param-name>logLevel</param-name>
+            <param-value>WARN</param-value>
+        </init-param>
+    </filter>
+	<filter-mapping>
+	       <filter-name>UrlRewriteFilter</filter-name>
+	       <url-pattern>/*</url-pattern>
+	</filter-mapping>
+
+    <!--<filter>-->
+        <!--<filter-name>EncodeFilter</filter-name>-->
+        <!--<filter-class>com.womai.shop.web.filter.EncodeFilter</filter-class>-->
+    <!--</filter>-->
+	<!--<filter-mapping>-->
+		<!--<filter-name>EncodeFilter</filter-name>-->
+		<!--<url-pattern>/*</url-pattern>-->
+	<!--</filter-mapping>-->
+
+
+    <filter>
+        <filter-name>timerFilter</filter-name>
+        <filter-class>com.womai.common.framework.web.filter.TimerFilter</filter-class>
+    </filter>
+    <filter-mapping>
+        <filter-name>timerFilter</filter-name>
+        <url-pattern>*.action</url-pattern>
+    </filter-mapping>
+    <filter>
+        <filter-name>charsetFilter</filter-name>
+        <filter-class>com.womai.common.framework.web.filter.CharsetFilter</filter-class>
+    </filter>
+    <filter-mapping>
+        <filter-name>charsetFilter</filter-name>
+        <url-pattern>*.action</url-pattern>
+    </filter-mapping>
+
+    <filter>
+        <filter-name>authenticationFilter</filter-name>
+        <filter-class>com.womai.ppclient.filter.AuthenticationFilter</filter-class>
+        <init-param>
+            <param-name>passportHost</param-name>
+            <param-value>${passport.url}</param-value>
+        </init-param>
+        <init-param>
+            <param-name>unProtectedFile</param-name>
+            <param-value>curEmergencySysMsg.action</param-value>
+        </init-param>
+        <!--<init-param>-->
+        <!--<param-name>unProtectedPath</param-name>-->
+        <!--<param-value></param-value>-->
+        <!--</init-param>-->
+        <init-param>
+            <param-name>userType</param-name>
+            <param-value>3</param-value>
+        </init-param>
+    </filter>
+    <filter-mapping>
+        <filter-name>authenticationFilter</filter-name>
+        <url-pattern>/manage/*</url-pattern>
+    </filter-mapping>
+
+    <!--<filter>-->
+        <!--<filter-name>struts2</filter-name>-->
+        <!--<filter-class>org.apache.struts2.dispatcher.ng.filter.StrutsPrepareAndExecuteFilter</filter-class>-->
+    <!--</filter>-->
+	<!--<filter-mapping>-->
+	   <!--<filter-name>struts2</filter-name>-->
+	   <!--<url-pattern>*.action</url-pattern>-->
+	  <!--</filter-mapping>-->
+	<!--<filter-mapping>-->
+		<!--<filter-name>struts2</filter-name>-->
+		<!--<url-pattern>*.jsp</url-pattern>-->
+	<!--</filter-mapping>-->
+	<!--<filter-mapping>-->
+	    <!--<filter-name>struts2</filter-name>-->
+	    <!--<url-pattern>/struts/*</url-pattern>-->
+	<!--</filter-mapping>-->
+	<!--<filter-mapping>-->
+		<!--<filter-name>struts2</filter-name>-->
+		<!--<url-pattern>/*</url-pattern>-->
+		<!--<dispatcher>REQUEST</dispatcher>  -->
+    	<!--<dispatcher>FORWARD</dispatcher>-->
+	<!--</filter-mapping>-->
+
+    <filter>
+        <filter-name>struts2</filter-name>
+        <filter-class>org.apache.struts2.dispatcher.ng.filter.StrutsPrepareAndExecuteFilter</filter-class>
+    </filter>
+    <filter-mapping>
+        <filter-name>struts2</filter-name>
+        <url-pattern>*.action</url-pattern>
+        <dispatcher>REQUEST</dispatcher>
+        <dispatcher>FORWARD</dispatcher>
+    </filter-mapping>
+    <filter-mapping>
+        <filter-name>struts2</filter-name>
+        <url-pattern>*.jsp</url-pattern>
+    </filter-mapping>
+    <!--<filter-mapping>-->
+        <!--<filter-name>struts2</filter-name>-->
+        <!--<url-pattern>/*</url-pattern>-->
+        <!--<dispatcher>REQUEST</dispatcher>-->
+        <!--<dispatcher>FORWARD</dispatcher>-->
+    <!--</filter-mapping>-->
+
+
+    <listener>
+        <listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
+    </listener>
+
+    <listener>
+        <listener-class>org.springframework.web.context.request.RequestContextListener</listener-class>
+    </listener>
+
+	
+	<jsp-config>
+	  <taglib>
+	    <taglib-uri>
+	      http://jsptags.com/tags/navigation/pager
+	    </taglib-uri>
+	    <taglib-location>
+	      /WEB-INF/jsp/pager-taglib.tld
+	    </taglib-location>
+	  </taglib>
+	</jsp-config>
+	
+	<listener>
+		<listener-class>com.womai.shop.web.listener.SystemListener</listener-class>
+	</listener>
+
+    <session-config>
+        <session-timeout>600</session-timeout>
+    </session-config>
+
+    <welcome-file-list>
+        <welcome-file>/index.jsp</welcome-file>
+    </welcome-file-list>
+</web-app>

@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<profilesXml xmlns="http://maven.apache.org/PROFILES/1.0.0"
+             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xsi:schemaLocation="http://maven.apache.org/PROFILES/1.0.0 http://maven.apache.org/xsd/profiles-1.0.0.xsd">
+
+    <profiles>
+        <profile>
+            <id>common</id>
+            <activation>
+                <activeByDefault>true</activeByDefault>
+            </activation>
+            <properties>
+                <home.url>http://ec.admin.womaiapp.${home.postfix}/</home.url>
+                <asset.url>http://ec.admin.womaiapp.${home.postfix}/</asset.url>
+                <passport.url>http://passport.womaiapp.${depend.postfix}/</passport.url>
+            </properties>
+        </profile>
+
+        <profile>
+            <id>local</id>
+            <activation>
+                <os>
+                    <family>Windows</family>
+                </os>
+            </activation>
+            <properties>
+                <home.postfix>local</home.postfix>
+                <depend.postfix>test</depend.postfix>
+
+                <jdbc.driverClassName>com.mysql.jdbc.Driver</jdbc.driverClassName>
+                <jdbc.url>
+                    <![CDATA[
+                    jdbc:mysql://10.0.0.51:3306/git_jeeshop?useUnicode=true&characterEncoding=utf-8&autoReconnect=true&failOverReadOnly=false&zeroDateTimeBehavior=convertToNull
+                ]]>
+                </jdbc.url>
+                <jdbc.username>user</jdbc.username>
+                <jdbc.password><![CDATA[user]]></jdbc.password>
+            </properties>
+        </profile>
+
+        <profile>
+            <id>dev</id>
+            <activation>
+                <os>
+                    <family>Linux</family>
+                </os>
+            </activation>
+            <properties>
+                <home.postfix>dev</home.postfix>
+                <depend.postfix>dev</depend.postfix>
+            </properties>
+        </profile>
+
+        <profile>
+            <id>test</id>
+            <properties>
+                <home.postfix>test</home.postfix>
+                <depend.postfix>test</depend.postfix>
+            </properties>
+        </profile>
+        <profile>
+            <id>pro</id>
+            <properties>
+                <home.postfix>com</home.postfix>
+                <depend.postfix>com</depend.postfix>
+            </properties>
+        </profile>
+    </profiles>
+
+</profilesXml>

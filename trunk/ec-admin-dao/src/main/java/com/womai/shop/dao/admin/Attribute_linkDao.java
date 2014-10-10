@@ -1,0 +1,1 @@
+package com.womai.shop.dao.admin;import com.womai.shop.dao.DaoManager;import com.womai.shop.domain.admin.Attribute_link;public interface Attribute_linkDao extends DaoManager<Attribute_link> {	/**	 * @param e	 * @return	 */	int deleteByCondition(Attribute_link e);	/**	 * 根据属性ID删除属性关联表的数据	 * @param id	 */	void deleteByAttributeId(int id);}

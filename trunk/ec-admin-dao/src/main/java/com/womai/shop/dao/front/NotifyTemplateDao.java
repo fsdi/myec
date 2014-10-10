@@ -1,0 +1,1 @@
+package com.womai.shop.dao.front;import com.womai.shop.dao.DaoManager;import com.womai.shop.domain.front.NotifyTemplate;public interface NotifyTemplateDao extends DaoManager<NotifyTemplate> {}

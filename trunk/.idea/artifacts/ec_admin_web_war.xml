@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="ec-admin-web:war">
+    <output-path>$PROJECT_DIR$/ec-admin-web/target</output-path>
+    <root id="archive" name="ec-admin-web-1.0-SNAPSHOT.war">
+      <element id="artifact" artifact-name="ec-admin-web:war exploded" />
+    </root>
+  </artifact>
+</component>

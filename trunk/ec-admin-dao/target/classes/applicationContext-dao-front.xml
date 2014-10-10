@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:aop="http://www.springframework.org/schema/aop"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.5.xsd
+            http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-2.5.xsd
+            http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-2.5.xsd"
+       default-lazy-init="true">
+
+    <!-- 会员管理 -->
+    <bean id="accountDaoFront" class="com.womai.shop.dao.front.impl.AccountDaoImpl">
+        <property name="dao" ref="baseDao"></property>
+    </bean>
+
+    <!-- 文章目录管理 -->
+    <bean id="catalogDaoFront" class="com.womai.shop.dao.front.impl.CatalogDaoImpl">
+        <property name="dao" ref="baseDao"></property>
+    </bean>
+
+    <!-- 门户新闻管理 -->
+    <bean id="newsDaoFront" class="com.womai.shop.dao.front.impl.NewsDaoImpl">
+        <property name="dao" ref="baseDao"></property>
+    </bean>
+
+    <!-- 滚动图片管理 -->
+    <bean id="indexImgDaoFront" class="com.womai.shop.dao.front.impl.IndexImgDaoImpl">
+        <property name="dao" ref="baseDao"></property>
+    </bean>
+
+    <!-- 产品管理 -->
+    <bean id="productDaoFront" class="com.womai.shop.dao.front.impl.ProductDaoImpl">
+        <property name="dao" ref="baseDao"></property>
+    </bean>
+
+    <!-- 订单配送信息 -->
+    <bean id="ordershipDaoFront" class="com.womai.shop.dao.front.impl.OrdershipDaoImpl">
+        <property name="dao" ref="baseDao"></property>
+    </bean>
+
+    <!-- 订单管理 -->
+    <bean id="orderDaoFront" class="com.womai.shop.dao.front.impl.OrderDaoImpl">
+        <property name="dao" ref="baseDao"></property>
+    </bean>
+
+    <!-- 订单项管理 -->
+    <bean id="orderdetailDaoFront" class="com.womai.shop.dao.front.impl.OrderdetailDaoImpl">
+        <property name="dao" ref="baseDao"></property>
+    </bean>
+
+    <!-- 门户导航管理 -->
+    <bean id="navigationDaoFront" class="com.womai.shop.dao.front.impl.NavigationDaoImpl">
+        <property name="dao" ref="baseDao"></property>
+    </bean>
+
+    <!-- 日志管理 -->
+    <bean id="systemlogDaoFront" class="com.womai.shop.dao.front.impl.SystemlogDaoImpl">
+        <property name="dao" ref="baseDao"></property>
+    </bean>
+
+    <!-- 区域管理 -->
+    <bean id="areaDaoFront" class="com.womai.shop.dao.front.impl.AreaDaoImpl">
+        <property name="dao" ref="baseDao"></property>
+    </bean>
+
+    <!-- 系统设置 -->
+    <bean id="systemSettingDaoFront" class="com.womai.shop.dao.front.impl.SystemSettingDaoImpl">
+        <property name="dao" ref="baseDao"></property>
+    </bean>
+
+    <!-- 评论管理 -->
+    <bean id="commentDaoFront" class="com.womai.shop.dao.front.impl.CommentDaoImpl">
+        <property name="dao" ref="baseDao"></property>
+    </bean>
+
+    <!-- 键值对管理 -->
+    <bean id="keyvalueDaoFront" class="com.womai.shop.dao.front.impl.KeyvalueDaoImpl">
+        <property name="dao" ref="baseDao"></property>
+    </bean>
+
+    <!-- 产品属性管理 -->
+    <bean id="attributeDaoFront" class="com.womai.shop.dao.front.impl.AttributeDaoImpl">
+        <property name="dao" ref="baseDao"></property>
+    </bean>
+
+    <!-- 属性，参数中间表 -->
+    <bean id="attribute_linkDaoFront" class="com.womai.shop.dao.front.impl.Attribute_linkDaoImpl">
+        <property name="dao" ref="baseDao"></property>
+    </bean>
+
+    <!-- 配送地址信息表 -->
+    <bean id="addressDaoFront" class="com.womai.shop.dao.front.impl.AddressDaoImpl">
+        <property name="dao" ref="baseDao"></property>
+    </bean>
+
+    <!-- 支付记录 -->
+    <bean id="orderpayDaoFront" class="com.womai.shop.dao.front.impl.OrderpayDaoImpl">
+        <property name="dao" ref="baseDao"></property>
+    </bean>
+
+    <!-- 订单日志 -->
+    <bean id="orderlogDaoFront" class="com.womai.shop.dao.front.impl.OrderlogDaoImpl">
+        <property name="dao" ref="baseDao"></property>
+    </bean>
+
+    <!-- 问卷 -->
+    <bean id="questionnaireDaoFront" class="com.womai.shop.dao.front.impl.QuestionnaireDaoImpl">
+        <property name="dao" ref="baseDao"></property>
+    </bean>
+
+    <!-- 问卷项目 -->
+    <bean id="questionnaireItemDaoFront" class="com.womai.shop.dao.front.impl.QuestionnaireItemDaoImpl">
+        <property name="dao" ref="baseDao"></property>
+    </bean>
+
+    <!-- 问卷结果 -->
+    <bean id="questionnaireResultDaoFront" class="com.womai.shop.dao.front.impl.QuestionnaireResultDaoImpl">
+        <property name="dao" ref="baseDao"></property>
+    </bean>
+
+    <!-- 支付方式 -->
+    <bean id="payDaoFront" class="com.womai.shop.dao.front.impl.PayDaoImpl">
+        <property name="dao" ref="baseDao"></property>
+    </bean>
+
+    <!-- 评论方式 -->
+    <bean id="commentTypeDaoFront" class="com.womai.shop.dao.front.impl.CommentTypeDaoImpl">
+        <property name="dao" ref="baseDao"></property>
+    </bean>
+
+    <!-- 物流 -->
+    <bean id="expressDaoFront" class="com.womai.shop.dao.front.impl.ExpressDaoImpl">
+        <property name="dao" ref="baseDao"></property>
+    </bean>
+
+    <!-- 邮件管理 -->
+    <bean id="emailDaoFront" class="com.womai.shop.dao.front.impl.EmailDaoImpl">
+        <property name="dao" ref="baseDao"></property>
+    </bean>
+
+    <!-- 商品收藏夹 -->
+    <bean id="favoriteDaoFront" class="com.womai.shop.dao.front.impl.FavoriteDaoImpl">
+        <property name="dao" ref="baseDao"></property>
+    </bean>
+
+    <!-- 广告管理 -->
+    <bean id="advertDaoFront" class="com.womai.shop.dao.front.impl.AdvertDaoImpl">
+        <property name="dao" ref="baseDao"></property>
+    </bean>
+
+    <!-- 商品到货通知 -->
+    <bean id="emailNotifyProductDaoFront" class="com.womai.shop.dao.front.impl.EmailNotifyProductDaoImpl">
+        <property name="dao" ref="baseDao"></property>
+    </bean>
+
+    <!-- 通知模板 -->
+    <bean id="notifyTemplateDaoFront" class="com.womai.shop.dao.front.impl.NotifyTemplateDaoImpl">
+        <property name="dao" ref="baseDao"></property>
+    </bean>
+
+</beans>

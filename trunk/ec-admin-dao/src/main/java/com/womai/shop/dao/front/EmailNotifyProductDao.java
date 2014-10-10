@@ -1,0 +1,1 @@
+package com.womai.shop.dao.front;import com.womai.shop.dao.DaoManager;import com.womai.shop.domain.front.EmailNotifyProduct;public interface EmailNotifyProductDao extends DaoManager<EmailNotifyProduct> {	int selectCount(EmailNotifyProduct ep);}

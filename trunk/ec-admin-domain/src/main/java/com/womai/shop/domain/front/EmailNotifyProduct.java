@@ -1,0 +1,1 @@
+package com.womai.shop.domain.front;import java.io.Serializable;public class EmailNotifyProduct extends		com.womai.shop.domain.common.EmailNotifyProduct implements Serializable {	private static final long serialVersionUID = 1L;	public void clear() {		super.clear();	}}

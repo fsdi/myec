@@ -1,0 +1,1 @@
+package com.womai.shop.dao.front;import java.util.List;import com.womai.shop.dao.DaoManager;import com.womai.shop.domain.front.Order;import com.womai.shop.domain.front.OrderSimpleReport;public interface OrderDao extends DaoManager<Order> {	List<Order> selectOrderInfo(Order order);	OrderSimpleReport selectOrdersSimpleReport(String account);}

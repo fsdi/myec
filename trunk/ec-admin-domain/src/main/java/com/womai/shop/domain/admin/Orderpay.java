@@ -1,0 +1,1 @@
+package com.womai.shop.domain.admin;import java.io.Serializable;public class Orderpay extends com.womai.shop.domain.common.Orderpay implements Serializable {	private static final long serialVersionUID = 1L;	public static final String orderpay_paymethod_alipayescow = "alipayescow";//支付宝纯担保交易接口	public void clear() {		super.clear();	}}

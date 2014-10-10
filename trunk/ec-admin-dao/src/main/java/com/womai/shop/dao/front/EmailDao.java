@@ -1,0 +1,1 @@
+package com.womai.shop.dao.front;import com.womai.shop.dao.DaoManager;import com.womai.shop.domain.front.Email;public interface EmailDao extends DaoManager<Email> {	void updateEmailInvalidWhenReg(Email email);}

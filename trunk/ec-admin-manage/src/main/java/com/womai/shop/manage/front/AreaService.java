@@ -1,0 +1,1 @@
+package com.womai.shop.manage.front;import com.womai.shop.manage.Services;import com.womai.shop.domain.front.Area;public interface AreaService extends Services<Area> {}

@@ -1,0 +1,1 @@
+package com.womai.shop.dao.admin;import com.womai.shop.dao.DaoManager;import com.womai.shop.domain.admin.QuestionnaireResult;public interface QuestionnaireResultDao extends DaoManager<QuestionnaireResult> {}

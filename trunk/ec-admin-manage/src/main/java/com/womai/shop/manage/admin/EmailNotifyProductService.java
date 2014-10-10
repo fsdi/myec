@@ -1,0 +1,1 @@
+package com.womai.shop.manage.admin;import com.womai.shop.manage.Services;import com.womai.shop.domain.admin.EmailNotifyProduct;public interface EmailNotifyProductService extends Services<EmailNotifyProduct> {	/**	 * 系统自动发送到货通知	 */	void autoNotify();}

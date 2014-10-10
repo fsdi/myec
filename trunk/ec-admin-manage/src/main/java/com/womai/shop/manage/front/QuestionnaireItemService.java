@@ -1,0 +1,1 @@
+package com.womai.shop.manage.front;import java.util.List;import com.womai.shop.manage.Services;import com.womai.shop.domain.front.QuestionnaireItem;public interface QuestionnaireItemService extends Services<QuestionnaireItem> {	void insertList(List<QuestionnaireItem> itemList);}

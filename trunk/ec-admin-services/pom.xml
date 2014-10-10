@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+
+    <modelVersion>4.0.0</modelVersion>
+
+    <parent>
+        <groupId>com.womai.ec.admin</groupId>
+        <artifactId>ec-admin</artifactId>
+        <version>1.0-SNAPSHOT</version>
+        <relativePath>../pom.xml</relativePath>
+    </parent>
+
+    <artifactId>ec-admin-services</artifactId>
+    <packaging>jar</packaging>
+    <name>EC ADMIN Modular - Services</name>
+    <!--<version>${scm.web.version}</version>-->
+
+    <build>
+        <testResources>
+            <testResource>
+                <directory>src/test/resources</directory>
+                <filtering>true</filtering>
+            </testResource>
+        </testResources>
+    </build>
+
+    <dependencies>
+        <dependency>
+            <groupId>${pom.parent.groupId}</groupId>
+            <artifactId>ec-admin-domain</artifactId>
+            <version>${pom.parent.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>${pom.parent.groupId}</groupId>
+            <artifactId>ec-admin-dao</artifactId>
+            <version>${pom.parent.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>${pom.parent.groupId}</groupId>
+            <artifactId>ec-admin-manage</artifactId>
+            <version>${pom.parent.version}</version>
+        </dependency>
+
+
+
+        <dependency>
+            <groupId>commons-codec</groupId>
+            <artifactId>commons-codec</artifactId>
+            <version>${commons.codec.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>commons-httpclient</groupId>
+            <artifactId>commons-httpclient</artifactId>
+            <version>${commons.httpclient.version}</version>
+        </dependency>
+
+
+
+
+        <dependency>
+            <groupId>com.aliyun.openservices</groupId>
+            <artifactId>aliyun-openservices</artifactId>
+            <version>1.0.12</version>
+        </dependency>
+
+        <dependency>
+            <groupId>dom4j</groupId>
+            <artifactId>dom4j</artifactId>
+            <version>1.4</version>
+        </dependency>
+
+
+
+        
+
+    </dependencies>
+
+</project>

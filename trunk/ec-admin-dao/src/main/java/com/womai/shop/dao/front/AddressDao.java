@@ -1,0 +1,1 @@
+package com.womai.shop.dao.front;import com.womai.shop.dao.DaoManager;import com.womai.shop.domain.front.Address;public interface AddressDao extends DaoManager<Address> {	/**	 * 初始化所有的地址全部为不选择	 */	void initAllAddress(Address address);}

@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:aop="http://www.springframework.org/schema/aop"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.5.xsd
+            http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-2.5.xsd
+            http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-2.5.xsd"
+       default-lazy-init="true">
+
+    <bean id="accountRankServiceManage" class="com.womai.shop.manage.admin.impl.AccountRankServiceImpl">
+        <property name="dao" ref="accountRankDaoAdmin"></property>
+        <property name="accountRankDao" ref="accountRankDaoAdmin"></property>
+    </bean>
+
+
+    <bean id="accountServiceManage" class="com.womai.shop.manage.admin.impl.AccountServiceImpl">
+        <property name="dao" ref="accountDaoAdmin"></property>
+    </bean>
+
+
+    <bean id="catalogServiceManage" class="com.womai.shop.manage.admin.impl.CatalogServiceImpl">
+        <property name="dao" ref="catalogDaoAdmin"></property>
+        <property name="catalogDao" ref="catalogDaoAdmin"></property>
+    </bean>
+
+
+    <bean id="newsServiceManage" class="com.womai.shop.manage.admin.impl.NewsServiceImpl">
+        <property name="dao" ref="newsDaoAdmin"></property>
+        <property name="newsDao" ref="newsDaoAdmin"></property>
+    </bean>
+
+
+    <bean id="indexImgServiceManage" class="com.womai.shop.manage.admin.impl.IndexImgServiceImpl">
+        <property name="dao" ref="indexImgDaoAdmin"></property>
+        <property name="indexImgDao" ref="indexImgDaoAdmin"></property>
+    </bean>
+
+
+    <bean id="productServiceManage" class="com.womai.shop.manage.admin.impl.ProductServiceImpl">
+        <property name="dao" ref="productDaoAdmin"></property>
+        <property name="productDao" ref="productDaoAdmin"></property>
+        <property name="specService" ref="specServiceManage"></property>
+    </bean>
+
+
+    <bean id="orderServiceManage" class="com.womai.shop.manage.admin.impl.OrderServiceImpl">
+        <property name="dao" ref="orderDaoAdmin"></property>
+        <property name="orderDao" ref="orderDaoAdmin"></property>
+        <property name="orderlogDao" ref="orderlogDaoAdmin"></property>
+    </bean>
+
+
+    <bean id="orderdetailServiceManage" class="com.womai.shop.manage.admin.impl.OrderdetailServiceImpl">
+        <property name="dao" ref="orderdetailDaoAdmin"></property>
+        <property name="orderdetailDao" ref="orderdetailDaoAdmin"></property>
+    </bean>
+
+
+    <bean id="navigationServiceManage" class="com.womai.shop.manage.admin.impl.NavigationServiceImpl">
+        <property name="dao" ref="navigationDaoAdmin"></property>
+        <property name="navigationDao" ref="navigationDaoAdmin"></property>
+    </bean>
+
+
+    <bean id="systemlogServiceManage" class="com.womai.shop.manage.admin.impl.SystemlogServiceImpl">
+        <property name="dao" ref="systemlogDaoAdmin"></property>
+        <property name="systemlogDao" ref="systemlogDaoAdmin"></property>
+    </bean>
+
+
+    <bean id="areaServiceManage" class="com.womai.shop.manage.admin.impl.AreaServiceImpl">
+        <property name="dao" ref="areaDaoAdmin"></property>
+        <property name="areaDao" ref="areaDaoAdmin"></property>
+    </bean>
+
+
+    <bean id="systemSettingServiceManage" class="com.womai.shop.manage.admin.impl.SystemSettingServiceImpl">
+        <property name="dao" ref="systemSettingDaoAdmin"></property>
+        <property name="systemSettingDao" ref="systemSettingDaoAdmin"></property>
+    </bean>
+
+
+    <bean id="commentServiceManage" class="com.womai.shop.manage.admin.impl.CommentServiceImpl">
+        <property name="dao" ref="commentDaoAdmin"></property>
+        <property name="commentDao" ref="commentDaoAdmin"></property>
+    </bean>
+
+
+    <bean id="keyvalueServiceManage" class="com.womai.shop.manage.admin.impl.KeyvalueServiceImpl">
+        <property name="dao" ref="keyvalueDaoAdmin"></property>
+        <property name="keyvalueDao" ref="keyvalueDaoAdmin"></property>
+    </bean>
+
+
+    <bean id="attributeServiceManage" class="com.womai.shop.manage.admin.impl.AttributeServiceImpl">
+        <property name="dao" ref="attributeDaoAdmin"></property>
+        <property name="attributeDao" ref="attributeDaoAdmin"></property>
+        <property name="attribute_linkDao" ref="attribute_linkDaoAdmin"></property>
+    </bean>
+
+
+    <bean id="attribute_linkServiceManage" class="com.womai.shop.manage.admin.impl.Attribute_linkServiceImpl">
+        <property name="dao" ref="attribute_linkDaoAdmin"></property>
+        <property name="attribute_linkDao" ref="attribute_linkDaoAdmin"></property>
+    </bean>
+
+
+    <bean id="orderpayServiceManage" class="com.womai.shop.manage.admin.impl.OrderpayServiceImpl">
+        <property name="dao" ref="orderpayDaoAdmin"></property>
+        <property name="orderpayDao" ref="orderpayDaoAdmin"></property>
+    </bean>
+
+
+    <bean id="ordershipServiceManage" class="com.womai.shop.manage.admin.impl.OrdershipServiceImpl">
+        <property name="dao" ref="ordershipDaoAdmin"></property>
+        <property name="ordershipDao" ref="ordershipDaoAdmin"></property>
+    </bean>
+
+
+    <bean id="advertServiceManage" class="com.womai.shop.manage.admin.impl.AdvertServiceImpl">
+        <property name="dao" ref="advertDaoAdmin"></property>
+        <property name="advertDao" ref="advertDaoAdmin"></property>
+    </bean>
+
+
+    <bean id="orderlogServiceManage" class="com.womai.shop.manage.admin.impl.OrderlogServiceImpl">
+        <property name="dao" ref="orderlogDaoAdmin"></property>
+        <property name="orderlogDao" ref="orderlogDaoAdmin"></property>
+    </bean>
+
+
+    <bean id="questionnaireServiceManage" class="com.womai.shop.manage.admin.impl.QuestionnaireServiceImpl">
+        <property name="dao" ref="questionnaireDaoAdmin"></property>
+        <property name="questionnaireDao" ref="questionnaireDaoAdmin"></property>
+    </bean>
+
+
+    <bean id="questionnaireItemServiceManage" class="com.womai.shop.manage.admin.impl.QuestionnaireItemServiceImpl">
+        <property name="dao" ref="questionnaireItemDaoAdmin"></property>
+        <property name="questionnaireItemDao" ref="questionnaireItemDaoAdmin"></property>
+    </bean>
+
+
+    <bean id="questionnaireResultServiceManage" class="com.womai.shop.manage.admin.QuestionnaireResultServiceImpl">
+        <property name="dao" ref="questionnaireResultDaoAdmin"></property>
+        <property name="questionnaireResultDao" ref="questionnaireResultDaoAdmin"></property>
+    </bean>
+
+
+    <bean id="payServiceManage" class="com.womai.shop.manage.admin.impl.PayServiceImpl">
+        <property name="dao" ref="payDaoAdmin"></property>
+        <property name="payDao" ref="payDaoAdmin"></property>
+    </bean>
+
+
+    <bean id="ossServiceManage" class="com.womai.shop.manage.admin.impl.OssServiceImpl">
+        <property name="dao" ref="ossDaoAdmin"></property>
+        <property name="ossDao" ref="ossDaoAdmin"></property>
+    </bean>
+
+
+    <bean id="commentTypeServiceManage" class="com.womai.shop.manage.admin.impl.CommentTypeServiceImpl">
+        <property name="dao" ref="commentTypeDaoAdmin"></property>
+        <property name="commentTypeDao" ref="commentTypeDaoAdmin"></property>
+    </bean>
+
+
+    <bean id="expressServiceManage" class="com.womai.shop.manage.admin.impl.ExpressServiceImpl">
+        <property name="dao" ref="expressDaoAdmin"></property>
+        <property name="expressDao" ref="expressDaoAdmin"></property>
+    </bean>
+
+
+    <bean id="smsServiceManage" class="com.womai.shop.manage.admin.impl.SmsServiceImpl">
+        <property name="dao" ref="smsDaoAdmin"></property>
+        <property name="smsDao" ref="smsDaoAdmin"></property>
+    </bean>
+
+
+    <bean id="emailNotifyProductServiceManage" class="com.womai.shop.manage.admin.impl.EmailNotifyProductServiceImpl">
+        <property name="dao" ref="emailNotifyProductDaoAdmin"></property>
+        <property name="emailNotifyProductDao" ref="emailNotifyProductDaoAdmin"></property>
+        <property name="productService" ref="productServiceManage"></property>
+        <property name="accountService" ref="accountServiceManage"></property>
+    </bean>
+
+
+    <bean id="notifyTemplateServiceManage" class="com.womai.shop.manage.admin.impl.NotifyTemplateServiceImpl">
+        <property name="dao" ref="notifyTemplateDaoAdmin"></property>
+        <property name="notifyTemplateDao" ref="notifyTemplateDaoAdmin"></property>
+    </bean>
+
+
+    <bean id="emailServiceManage" class="com.womai.shop.manage.admin.impl.EmailServiceImpl">
+        <property name="dao" ref="emailDaoAdmin"></property>
+        <property name="emailDao" ref="emailDaoAdmin"></property>
+    </bean>
+
+
+    <bean id="taskServiceManage" class="com.womai.shop.manage.admin.impl.TaskServiceImpl">
+        <property name="dao" ref="taskDaoAdmin"></property>
+        <property name="taskDao" ref="taskDaoAdmin"></property>
+    </bean>
+
+
+    <bean id="activityServiceManage" class="com.womai.shop.manage.admin.impl.ActivityServiceImpl">
+        <property name="dao" ref="activityDaoAdmin"></property>
+        <property name="activityDao" ref="activityDaoAdmin"></property>
+        <property name="productService" ref="productServiceManage"></property>
+    </bean>
+
+
+    <bean id="specServiceManage" class="com.womai.shop.manage.admin.impl.SpecServiceImpl">
+        <property name="dao" ref="specDaoAdmin"></property>
+        <property name="specDao" ref="specDaoAdmin"></property>
+    </bean>
+
+
+    <bean id="giftServiceManage" class="com.womai.shop.manage.admin.impl.GiftServiceImpl">
+        <property name="dao" ref="giftDaoAdmin"></property>
+        <property name="giftDao" ref="giftDaoAdmin"></property>
+    </bean>
+
+
+    <bean id="hotqueryServiceManage" class="com.womai.shop.manage.admin.impl.HotqueryServiceImpl">
+        <property name="dao" ref="hotqueryDaoAdmin"></property>
+        <property name="hotqueryDao" ref="hotqueryDaoAdmin"></property>
+    </bean>
+
+
+
+</beans>

@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.womai.ec.admin</groupId>
+    <artifactId>ec-admin</artifactId>
+    <packaging>pom</packaging>
+    <version>1.0-SNAPSHOT</version>
+    <name>EC ADMIN Modular</name>
+    <url>http://www.womai.com</url>
+
+    <prerequisites>
+        <maven>2.2.1</maven>
+    </prerequisites>
+
+    <modules>
+        <module>ec-admin-domain</module>
+        <module>ec-admin-dao</module>
+        <module>ec-admin-manage</module>
+        <module>ec-admin-services</module>
+        <module>ec-admin-web</module>
+    </modules>
+
+    <distributionManagement>
+        <repository>
+            <id>nexus-releases</id>
+            <name>Nexus Release Repository</name>
+            <url>http://nexus.womai.dev/content/repositories/releases/</url>
+        </repository>
+        <snapshotRepository>
+            <id>nexus-snapshots</id>
+            <name>Nexus Snapshot Repository</name>
+            <url>http://nexus.womai.dev/content/repositories/snapshots/</url>
+        </snapshotRepository>
+    </distributionManagement>
+
+    <build>
+        <defaultGoal>install</defaultGoal>
+        <plugins>
+            <plugin>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>2.3.2</version>
+                <configuration>
+                    <source>1.6</source>
+                    <target>1.6</target>
+                    <encoding>UTF-8</encoding>
+                    <compilerArguments>
+                        <bootclasspath>
+                            ${java.home}\lib\rt.jar;${java.home}\lib\jce.jar
+                        </bootclasspath>
+                    </compilerArguments>
+                </configuration>
+            </plugin>
+            <plugin>
+                <artifactId>maven-assembly-plugin</artifactId>
+                <configuration>
+                    <descriptorRefs>
+                        <descriptorRef>jar-with-dependencies</descriptorRef>
+                    </descriptorRefs>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+
+    <dependencies>
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit-dep</artifactId>
+            <version>4.5</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>${junit.version}</version>
+            <scope>test</scope>
+            <optional>true</optional>
+        </dependency>
+        <dependency>
+            <groupId>log4j</groupId>
+            <artifactId>log4j</artifactId>
+            <version>${log4j.version}</version>
+            <exclusions>
+                <exclusion>
+                    <artifactId>mail</artifactId>
+                    <groupId>javax.mail</groupId>
+                </exclusion>
+                <exclusion>
+                    <artifactId>jms</artifactId>
+                    <groupId>javax.jms</groupId>
+                </exclusion>
+                <exclusion>
+                    <artifactId>jmxtools</artifactId>
+                    <groupId>com.sun.jdmk</groupId>
+                </exclusion>
+                <exclusion>
+                    <artifactId>jmxri</artifactId>
+                    <groupId>com.sun.jmx</groupId>
+                </exclusion>
+            </exclusions>
+        </dependency>
+        <dependency>
+            <groupId>commons-logging</groupId>
+            <artifactId>commons-logging-api</artifactId>
+            <version>1.1</version>
+        </dependency>
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-api</artifactId>
+            <version>1.6.1</version>
+        </dependency>
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-log4j12</artifactId>
+            <version>1.6.1</version>
+        </dependency>
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-nop</artifactId>
+            <version>1.6.1</version>
+        </dependency>
+
+    </dependencies>
+
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+
+        <java.home>${env.JAVA_HOME}\jre\</java.home>
+        <!--<java.home>C:\Program Files\Java\jdk1.7.0_45\jre\</java.home>-->
+        <framework.domain.version>1.0-SNAPSHOT</framework.domain.version>
+        <framework.dao.version>1.0-SNAPSHOT</framework.dao.version>
+        <framework.manager.version>1.0-SNAPSHOT</framework.manager.version>
+        <framework.web.version>1.0-SNAPSHOT</framework.web.version>
+        <framework.struts.version>1.0-SNAPSHOT</framework.struts.version>
+        <tool.util.version>1.0-SNAPSHOT</tool.util.version>
+        <ppclient.version>1.0-SNAPSHOT</ppclient.version>
+        <auth.soa.api.version>1.0-SNAPSHOT</auth.soa.api.version>
+
+        <commons.lang.version>2.6</commons.lang.version>
+        <commons.codec.version>1.6</commons.codec.version>
+        <commons.beanutils.version>1.8.3</commons.beanutils.version>
+        <commons.dbcp.version>1.2.1</commons.dbcp.version>
+        <commons.httpclient.version>3.0.1</commons.httpclient.version>
+        <jmock.version>2.5.1</jmock.version>
+		<junit.version>4.8.2</junit.version>
+        <log4j.version>1.2.16</log4j.version>
+        <jsp.version>2.0</jsp.version>
+        <servlet.version>2.5</servlet.version>
+        <jstl.version>1.1.2</jstl.version>
+        <standard.version>1.1.2</standard.version>
+        <struts.version>2.3.15.1</struts.version>
+        <spring.version>3.0.6.RELEASE</spring.version>
+        <ibatis.version>2.3.4.726</ibatis.version>
+        <org.json.version>20090211</org.json.version>
+
+        <org.aspectj.version>1.6.9</org.aspectj.version>
+        <mysql.version>5.1.21</mysql.version>
+        <spring.security.version>2.0.4</spring.security.version>
+        <dubbo.version>2.4.5</dubbo.version>
+        <zkclient.version>0.1</zkclient.version>
+
+    </properties>
+
+
+
+</project>

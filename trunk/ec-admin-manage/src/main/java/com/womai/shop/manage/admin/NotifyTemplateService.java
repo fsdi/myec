@@ -1,0 +1,1 @@
+package com.womai.shop.manage.admin;import com.womai.shop.manage.Services;import com.womai.shop.domain.admin.NotifyTemplate;public interface NotifyTemplateService extends Services<NotifyTemplate> {}

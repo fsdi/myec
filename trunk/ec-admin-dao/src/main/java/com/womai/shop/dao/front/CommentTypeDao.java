@@ -1,0 +1,1 @@
+package com.womai.shop.dao.front;import com.womai.shop.dao.DaoManager;import com.womai.shop.domain.front.CommentType;public interface CommentTypeDao extends DaoManager<CommentType> {}

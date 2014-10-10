@@ -1,0 +1,1 @@
+package com.womai.shop.manage.front;import com.womai.shop.manage.Services;import com.womai.shop.domain.front.EmailNotifyProduct;public interface EmailNotifyProductService extends Services<EmailNotifyProduct> {	int selectCount(EmailNotifyProduct ep);}

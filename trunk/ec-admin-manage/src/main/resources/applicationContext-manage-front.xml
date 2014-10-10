@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:aop="http://www.springframework.org/schema/aop"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.5.xsd
+            http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-2.5.xsd
+            http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-2.5.xsd"
+       default-lazy-init="true">
+
+    <!-- 会员管理 -->
+    <bean id="accountServiceFront" class="com.womai.shop.manage.front.impl.AccountServiceImpl">
+        <property name="dao" ref="accountDaoFront"></property>
+        <property name="accountDao" ref="accountDaoFront"></property>
+        <property name="emailService" ref="emailServiceFront"></property>
+    </bean>
+
+    <!-- 文章目录管理 -->
+    <bean id="catalogServiceFront" class="com.womai.shop.manage.front.impl.CatalogServiceImpl">
+        <property name="dao" ref="catalogDaoFront"></property>
+        <property name="catalogDao" ref="catalogDaoFront"></property>
+    </bean>
+
+    <!-- 门户新闻管理 -->
+    <bean id="newsServiceFront" class="com.womai.shop.manage.front.impl.NewsServiceImpl">
+        <property name="dao" ref="newsDaoFront"></property>
+        <property name="newsDao" ref="newsDaoFront"></property>
+    </bean>
+
+    <!-- 滚动图片管理 -->
+    <bean id="indexImgServiceFront" class="com.womai.shop.manage.front.impl.IndexImgServiceImpl">
+        <property name="dao" ref="indexImgDaoFront"></property>
+        <property name="indexImgDao" ref="indexImgDaoFront"></property>
+    </bean>
+
+    <!-- 产品管理 -->
+    <bean id="productServiceFront" class="com.womai.shop.manage.front.impl.ProductServiceImpl">
+        <property name="dao" ref="productDaoFront"></property>
+        <property name="productDao" ref="productDaoFront"></property>
+    </bean>
+
+    <!-- 订单配送信息 -->
+    <bean id="ordershipServiceFront" class="com.womai.shop.manage.front.impl.OrdershipServiceImpl">
+        <property name="dao" ref="ordershipDaoFront"></property>
+        <property name="ordershipDao" ref="ordershipDaoFront"></property>
+    </bean>
+
+    <!-- 订单管理 -->
+    <bean id="orderServiceFront" class="com.womai.shop.manage.front.impl.OrderServiceImpl">
+        <property name="dao" ref="orderDaoFront"></property>
+        <property name="orderDao" ref="orderDaoFront"></property>
+        <property name="orderdetailDao" ref="orderdetailDaoFront"></property>
+        <property name="orderpayDao" ref="orderpayDaoFront"></property>
+        <property name="ordershipDao" ref="ordershipDaoFront"></property>
+        <property name="orderlogDao" ref="orderlogDaoFront"></property>
+        <property name="productDao" ref="productDaoFront"></property>
+        <property name="accountService" ref="accountServiceFront"></property>
+    </bean>
+
+    <!-- 订单项管理 -->
+    <bean id="orderdetailServiceFront" class="com.womai.shop.manage.front.impl.OrderdetailServiceImpl">
+        <property name="dao" ref="orderdetailDaoFront"></property>
+        <property name="orderdetailDao" ref="orderdetailDaoFront"></property>
+    </bean>
+
+    <!-- 门户导航管理 -->
+    <bean id="navigationServiceFront" class="com.womai.shop.manage.front.impl.NavigationServiceImpl">
+        <property name="dao" ref="navigationDaoFront"></property>
+        <property name="navigationDao" ref="navigationDaoFront"></property>
+    </bean>
+
+    <!-- 日志管理 -->
+    <bean id="systemlogServiceFront" class="com.womai.shop.manage.front.impl.SystemlogServiceImpl">
+        <property name="dao" ref="systemlogDaoFront"></property>
+        <property name="systemlogDao" ref="systemlogDaoFront"></property>
+    </bean>
+
+    <!-- 区域管理 -->
+    <bean id="areaServiceFront" class="com.womai.shop.manage.front.impl.AreaServiceImpl">
+        <property name="dao" ref="areaDaoFront"></property>
+        <property name="areaDao" ref="areaDaoFront"></property>
+    </bean>
+
+    <!-- 系统设置 -->
+    <bean id="systemSettingServiceFront" class="com.womai.shop.manage.front.impl.SystemSettingServiceImpl">
+        <property name="dao" ref="systemSettingDaoFront"></property>
+        <property name="systemSettingDao" ref="systemSettingDaoFront"></property>
+    </bean>
+
+    <!-- 评论管理 -->
+    <bean id="commentServiceFront" class="com.womai.shop.manage.front.impl.CommentServiceImpl">
+        <property name="dao" ref="commentDaoFront"></property>
+        <property name="commentDao" ref="commentDaoFront"></property>
+        <property name="orderdetailDao" ref="orderdetailDaoFront"></property>
+        <property name="orderDao" ref="orderDaoFront"></property>
+        <property name="accountService" ref="accountServiceFront"></property>
+    </bean>
+
+
+    <!-- 键值对管理 -->
+    <bean id="keyvalueServiceFront" class="com.womai.shop.manage.front.impl.KeyvalueServiceImpl">
+        <property name="dao" ref="keyvalueDaoFront"></property>
+        <property name="keyvalueDao" ref="keyvalueDaoFront"></property>
+    </bean>
+
+    <!-- 产品属性管理 -->
+    <bean id="attributeServiceFront" class="com.womai.shop.manage.front.impl.AttributeServiceImpl">
+        <property name="dao" ref="attributeDaoFront"></property>
+        <property name="attributeDao" ref="attributeDaoFront"></property>
+    </bean>
+
+
+    <!-- 属性，参数中间表 -->
+    <bean id="attribute_linkServiceFront" class="com.womai.shop.manage.front.impl.Attribute_linkServiceImpl">
+        <property name="dao" ref="attribute_linkDaoFront"></property>
+        <property name="attribute_linkDao" ref="attribute_linkDaoFront"></property>
+    </bean>
+
+    <!-- 配送地址信息表 -->
+    <bean id="addressServiceFront" class="com.womai.shop.manage.front.impl.AddressServiceImpl">
+        <property name="dao" ref="addressDaoFront"></property>
+        <property name="addressDao" ref="addressDaoFront"></property>
+    </bean>
+
+    <!-- 支付记录 -->
+    <bean id="orderpayServiceFront" class="com.womai.shop.manage.front.impl.OrderpayServiceImpl">
+        <property name="dao" ref="orderpayDaoFront"></property>
+        <property name="orderpayDao" ref="orderpayDaoFront"></property>
+    </bean>
+
+
+    <!-- 订单日志 -->
+    <bean id="orderlogServiceFront" class="com.womai.shop.manage.front.impl.OrderlogServiceImpl">
+        <property name="dao" ref="orderlogDaoFront"></property>
+        <property name="orderlogDao" ref="orderlogDaoFront"></property>
+    </bean>
+
+    <!-- 问卷 -->
+    <bean id="questionnaireServiceFront" class="com.womai.shop.manage.front.impl.QuestionnaireServiceImpl">
+        <property name="dao" ref="questionnaireDaoFront"></property>
+        <property name="questionnaireDao" ref="questionnaireDaoFront"></property>
+    </bean>
+
+    <!-- 问卷项目 -->
+    <bean id="questionnaireItemServiceFront" class="com.womai.shop.manage.front.impl.QuestionnaireItemServiceImpl">
+        <property name="dao" ref="questionnaireItemDaoFront"></property>
+        <property name="questionnaireItemDao" ref="questionnaireItemDaoFront"></property>
+    </bean>
+
+    <!-- 问卷结果 -->
+    <bean id="questionnaireResultServiceFront" class="com.womai.shop.manage.front.impl.QuestionnaireResultServiceImpl">
+        <property name="dao" ref="questionnaireResultDaoFront"></property>
+        <property name="questionnaireResultDao" ref="questionnaireResultDaoFront"></property>
+    </bean>
+
+    <!-- 支付方式 -->
+    <bean id="payServiceFront" class="com.womai.shop.manage.front.impl.PayServiceImpl">
+        <property name="dao" ref="payDaoFront"></property>
+        <property name="payDao" ref="payDaoFront"></property>
+    </bean>
+
+    <!-- 评论方式 -->
+    <bean id="commentTypeServiceFront" class="com.womai.shop.manage.front.impl.CommentTypeServiceImpl">
+        <property name="dao" ref="commentTypeDaoFront"></property>
+        <property name="commentTypeDao" ref="commentTypeDaoFront"></property>
+    </bean>
+
+    <!-- 物流 -->
+    <bean id="expressServiceFront" class="com.womai.shop.manage.front.impl.ExpressServiceImpl">
+        <property name="dao" ref="expressDaoFront"></property>
+        <property name="expressDao" ref="expressDaoFront"></property>
+    </bean>
+
+    <!-- 邮件管理 -->
+    <bean id="emailServiceFront" class="com.womai.shop.manage.front.impl.EmailServiceImpl">
+        <property name="dao" ref="emailDaoFront"></property>
+        <property name="emailDao" ref="emailDaoFront"></property>
+    </bean>
+
+    <!-- 商品收藏夹 -->
+    <bean id="favoriteServiceFront" class="com.womai.shop.manage.front.impl.FavoriteServiceImpl">
+        <property name="dao" ref="favoriteDaoFront"></property>
+        <property name="favoriteDao" ref="favoriteDaoFront"></property>
+    </bean>
+
+    <!-- 广告管理 -->
+    <bean id="advertServiceFront" class="com.womai.shop.manage.front.impl.AdvertServiceImpl">
+        <property name="dao" ref="advertDaoFront"></property>
+        <property name="advertDao" ref="advertDaoFront"></property>
+    </bean>
+
+    <!-- 商品到货通知 -->
+    <bean id="emailNotifyProductServiceFront" class="com.womai.shop.manage.front.impl.EmailNotifyProductServiceImpl">
+        <property name="dao" ref="emailNotifyProductDaoFront"></property>
+        <property name="emailNotifyProductDao" ref="emailNotifyProductDaoFront"></property>
+    </bean>
+
+    <!-- 通知模板 -->
+    <bean id="notifyTemplateServiceFront" class="com.womai.shop.manage.front.impl.NotifyTemplateServiceImpl">
+        <property name="dao" ref="notifyTemplateDaoFront"></property>
+        <property name="notifyTemplateDao" ref="notifyTemplateDaoFront"></property>
+    </bean>
+
+
+</beans>

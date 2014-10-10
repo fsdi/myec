@@ -1,0 +1,1 @@
+package com.womai.shop.dao.admin;import com.womai.shop.dao.DaoManager;import com.womai.shop.domain.admin.Attribute;public interface AttributeDao extends DaoManager<Attribute> {	/**	 * @param e	 */	void deleteByPid(int pid);	/**	 * @param id	 */	void deleteAllById(int id);	int selectCount(Attribute ee);}

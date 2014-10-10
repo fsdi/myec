@@ -1,0 +1,1 @@
+package com.womai.shop.manage.admin;import com.womai.shop.manage.Services;import com.womai.shop.domain.admin.Systemlog;public interface SystemlogService extends Services<Systemlog> {		/**	 * 根据账号查询最新的一次登陆记录	 * @return	 */	Systemlog selectFirstOne(String account);}

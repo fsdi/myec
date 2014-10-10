@@ -1,0 +1,1 @@
+package com.womai.shop.dao.front;import com.womai.shop.dao.DaoManager;import com.womai.shop.domain.front.Attribute_link;public interface Attribute_linkDao extends DaoManager<Attribute_link> {	/**	 * @param e	 * @return	 */	int deleteByCondition(Attribute_link e);}

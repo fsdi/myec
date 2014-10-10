@@ -1,0 +1,1 @@
+package com.womai.shop.dao.front;import com.womai.shop.dao.DaoManager;import com.womai.shop.domain.front.Orderpay;public interface OrderpayDao extends DaoManager<Orderpay> {}

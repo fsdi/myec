@@ -1,0 +1,1 @@
+package com.womai.shop.domain.admin;import java.io.Serializable;public class AccountRank extends com.womai.shop.domain.common.AccountRank implements Serializable {	private static final long serialVersionUID = 1L;	public void clear() {		super.clear();	}}

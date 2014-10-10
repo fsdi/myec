@@ -1,0 +1,1 @@
+package com.womai.shop.domain.admin;import java.io.Serializable;public class Orderlog extends com.womai.shop.domain.common.Orderlog implements Serializable {	private static final long serialVersionUID = 1L;	public Orderlog() {		super();	}	public Orderlog(String orderid) {		super(orderid);	}	public void clear() {		super.clear();	}}

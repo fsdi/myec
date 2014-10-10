@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:aop="http://www.springframework.org/schema/aop"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.5.xsd
+            http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-2.5.xsd
+            http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-2.5.xsd"
+       default-lazy-init="true">
+
+    <!-- 会员等级 -->
+    <bean id="accountRankDaoAdmin" class="com.womai.shop.dao.admin.impl.AccountRankDaoImpl">
+        <property name="dao" ref="baseDao"></property>
+    </bean>
+
+    <!-- 会员管理 -->
+    <bean id="accountDaoAdmin" class="com.womai.shop.dao.admin.impl.AccountDaoImpl">
+        <property name="dao" ref="baseDao"></property>
+    </bean>
+
+    <!-- 文章目录管理 -->
+    <bean id="catalogDaoAdmin" class="com.womai.shop.dao.admin.impl.CatalogDaoImpl">
+        <property name="dao" ref="baseDao"></property>
+    </bean>
+
+    <!-- 门户新闻管理 -->
+    <bean id="newsDaoAdmin" class="com.womai.shop.dao.admin.impl.NewsDaoImpl">
+        <property name="dao" ref="baseDao"></property>
+    </bean>
+
+    <!-- 滚动图片管理 -->
+    <bean id="indexImgDaoAdmin" class="com.womai.shop.dao.admin.impl.IndexImgDaoImpl">
+        <property name="dao" ref="baseDao"></property>
+    </bean>
+
+    <!-- 产品管理 -->
+    <bean id="productDaoAdmin" class="com.womai.shop.dao.admin.impl.ProductDaoImpl">
+        <property name="dao" ref="baseDao"></property>
+    </bean>
+
+    <!-- 订单管理 -->
+    <bean id="orderDaoAdmin" class="com.womai.shop.dao.admin.impl.OrderDaoImpl">
+        <property name="dao" ref="baseDao"></property>
+    </bean>
+
+    <!-- 订单项管理 -->
+    <bean id="orderdetailDaoAdmin" class="com.womai.shop.dao.admin.impl.OrderdetailDaoImpl">
+        <property name="dao" ref="baseDao"></property>
+    </bean>
+
+    <!-- 门户导航管理 -->
+    <bean id="navigationDaoAdmin" class="com.womai.shop.dao.admin.impl.NavigationDaoImpl">
+        <property name="dao" ref="baseDao"></property>
+    </bean>
+
+    <!-- 日志管理 -->
+    <bean id="systemlogDaoAdmin" class="com.womai.shop.dao.admin.impl.SystemlogDaoImpl">
+        <property name="dao" ref="baseDao"></property>
+    </bean>
+
+    <!-- 区域管理 -->
+    <bean id="areaDaoAdmin" class="com.womai.shop.dao.admin.impl.AreaDaoImpl">
+        <property name="dao" ref="baseDao"></property>
+    </bean>
+
+    <!-- 系统设置 -->
+    <bean id="systemSettingDaoAdmin" class="com.womai.shop.dao.admin.impl.SystemSettingDaoImpl">
+        <property name="dao" ref="baseDao"></property>
+    </bean>
+
+    <!-- 评论管理 -->
+    <bean id="commentDaoAdmin" class="com.womai.shop.dao.admin.impl.CommentDaoImpl">
+        <property name="dao" ref="baseDao"></property>
+    </bean>
+
+    <!-- 键值对管理 -->
+    <bean id="keyvalueDaoAdmin" class="com.womai.shop.dao.admin.impl.KeyvalueDaoImpl">
+        <property name="dao" ref="baseDao"></property>
+    </bean>
+
+    <!-- 产品属性管理 -->
+    <bean id="attributeDaoAdmin" class="com.womai.shop.dao.admin.impl.AttributeDaoImpl">
+        <property name="dao" ref="baseDao"></property>
+    </bean>
+
+    <!-- 属性，参数中间表 -->
+    <bean id="attribute_linkDaoAdmin" class="com.womai.shop.dao.admin.impl.Attribute_linkDaoImpl">
+        <property name="dao" ref="baseDao"></property>
+    </bean>
+
+    <!-- 支付记录 -->
+    <bean id="orderpayDaoAdmin" class="com.womai.shop.dao.admin.impl.OrderpayDaoImpl">
+        <property name="dao" ref="baseDao"></property>
+    </bean>
+
+    <!-- 订单配送信息 -->
+    <bean id="ordershipDaoAdmin" class="com.womai.shop.dao.admin.impl.OrdershipDaoImpl">
+        <property name="dao" ref="baseDao"></property>
+    </bean>
+
+    <!-- 广告管理 -->
+    <bean id="advertDaoAdmin" class="com.womai.shop.dao.admin.impl.AdvertDaoImpl">
+        <property name="dao" ref="baseDao"></property>
+    </bean>
+
+    <!-- 订单日志 -->
+    <bean id="orderlogDaoAdmin" class="com.womai.shop.dao.admin.impl.OrderlogDaoImpl">
+        <property name="dao" ref="baseDao"></property>
+    </bean>
+
+    <!-- 问卷 -->
+    <bean id="questionnaireDaoAdmin" class="com.womai.shop.dao.admin.impl.QuestionnaireDaoImpl">
+        <property name="dao" ref="baseDao"></property>
+    </bean>
+
+    <!-- 问卷项目 -->
+    <bean id="questionnaireItemDaoAdmin" class="com.womai.shop.dao.admin.impl.QuestionnaireItemDaoImpl">
+        <property name="dao" ref="baseDao"></property>
+    </bean>
+
+    <!-- 问卷结果 -->
+    <bean id="questionnaireResultDaoAdmin" class="com.womai.shop.dao.admin.impl.QuestionnaireResultDaoImpl">
+        <property name="dao" ref="baseDao"></property>
+    </bean>
+
+    <!-- 支付方式 -->
+    <bean id="payDaoAdmin" class="com.womai.shop.dao.admin.impl.PayDaoImpl">
+        <property name="dao" ref="baseDao"></property>
+    </bean>
+
+    <!-- 存储方式 -->
+    <bean id="ossDaoAdmin" class="com.womai.shop.dao.admin.impl.OssDaoImpl">
+        <property name="dao" ref="baseDao"></property>
+    </bean>
+
+    <!-- 评论方式 -->
+    <bean id="commentTypeDaoAdmin" class="com.womai.shop.dao.admin.impl.CommentTypeDaoImpl">
+        <property name="dao" ref="baseDao"></property>
+    </bean>
+
+    <!-- 物流 -->
+    <bean id="expressDaoAdmin" class="com.womai.shop.dao.admin.impl.ExpressDaoImpl">
+        <property name="dao" ref="baseDao"></property>
+    </bean>
+
+    <!-- SMS短信 -->
+    <bean id="smsDaoAdmin" class="com.womai.shop.dao.admin.impl.SmsDaoImpl">
+        <property name="dao" ref="baseDao"></property>
+    </bean>
+
+    <!-- 商品到货通知 -->
+    <bean id="emailNotifyProductDaoAdmin" class="com.womai.shop.dao.admin.impl.EmailNotifyProductDaoImpl">
+        <property name="dao" ref="baseDao"></property>
+    </bean>
+
+    <!-- 通知模板 -->
+    <bean id="notifyTemplateDaoAdmin" class="com.womai.shop.dao.admin.impl.NotifyTemplateDaoImpl">
+        <property name="dao" ref="baseDao"></property>
+    </bean>
+
+    <!-- 邮件管理 -->
+    <bean id="emailDaoAdmin" class="com.womai.shop.dao.admin.impl.EmailDaoImpl">
+        <property name="dao" ref="baseDao"></property>
+    </bean>
+
+    <!-- 任务管理 -->
+    <bean id="taskDaoAdmin" class="com.womai.shop.dao.admin.impl.TaskDaoImpl">
+        <property name="dao" ref="baseDao"></property>
+    </bean>
+
+    <!-- 促销活动管理 -->
+    <bean id="activityDaoAdmin" class="com.womai.shop.dao.admin.impl.ActivityDaoImpl">
+        <property name="dao" ref="baseDao"></property>
+    </bean>
+
+    <!-- 商品规格管理 -->
+    <bean id="specDaoAdmin" class="com.womai.shop.dao.admin.impl.SpecDaoImpl">
+        <property name="dao" ref="baseDao"></property>
+    </bean>
+
+    <!-- 商品赠品管理 -->
+    <bean id="giftDaoAdmin" class="com.womai.shop.dao.admin.impl.GiftDaoImpl">
+        <property name="dao" ref="baseDao"></property>
+    </bean>
+
+    <!-- 热门查询管理 -->
+    <bean id="hotqueryDaoAdmin" class="com.womai.shop.dao.admin.impl.HotqueryDaoImpl">
+        <property name="dao" ref="baseDao"></property>
+    </bean>
+
+</beans>

@@ -1,0 +1,1 @@
+package com.womai.shop.dao.admin;import java.util.List;import com.womai.shop.dao.DaoManager;import com.womai.shop.domain.admin.Catalog;public interface CatalogDao extends DaoManager<Catalog> {	/**	 * @param string	 */	void deletes(List<String> list);}

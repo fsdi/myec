@@ -1,0 +1,1 @@
+package com.womai.shop.domain.front;import java.io.Serializable;public class Ordership extends com.womai.shop.domain.common.Ordership implements		Serializable {	private static final long serialVersionUID = 1L;	public Ordership() {		super();	}	public Ordership(String orderid) {		super(orderid);	}	public void clear() {		super.clear();	}}

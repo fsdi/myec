@@ -1,0 +1,1 @@
+package com.womai.shop.manage.front;import com.womai.shop.manage.Services;import com.womai.shop.domain.front.Attribute_link;public interface Attribute_linkService extends Services<Attribute_link> {	/**	 * @param oldAttr	 */	int deleteByCondition(Attribute_link oldAttr);}
